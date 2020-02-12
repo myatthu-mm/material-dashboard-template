@@ -18,9 +18,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 > This project was implemented for Front-end admin site solutions.
 
-> Using Angular official Material(Link) and Creative Tim's Material Bootstrap(Link) template.
+> Using Angular official [Material](https://material.angular.io/) and Creative Tim's [Material Bootstrap](https://demos.creative-tim.com/material-dashboard-angular2) template.
 
-> Modified and used own project code architecture (Link).
+> Modified and used [Own project code architecture](https://github.com/myatthu-mm/FE-BE-Hierarcy).
 
 > Layouts are also responsive.
 
