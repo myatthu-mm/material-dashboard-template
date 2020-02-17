@@ -1,20 +1,18 @@
 import { Injectable } from '@angular/core';
 import { UrlBuilder } from '../classes/url-builder';
 import { QueryStringParameters } from '../classes/query-string-parameters';
-import { ENV } from 'environments/environment';
-import { MOCK_ENV } from 'environments/environment.mock';
+import { environment } from '../../../../environments/environment.prod';
+import { MOCK_ENV } from '../../../../environments/environment.mock';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiEndpointService {
-  constructor() { }
+  constructor() {}
 
   /** URL Creator */
   public createUrl(action: string, isMockAPI: boolean = false): string {
     const urlBuilder: UrlBuilder = new UrlBuilder(
-      isMockAPI
-        ? MOCK_ENV.API_ENDPOINT
-        : ENV.API_ENDPOINT,
+      isMockAPI ? MOCK_ENV.API_ENDPOINT : environment.API_ENDPOINT,
       action
     );
     return urlBuilder.toString();
@@ -22,10 +20,12 @@ export class ApiEndpointService {
 
   /** URL WITH QUERY PARAMS */
 
-  private createUrlWithQueryParameters(action: string,
-    queryStringHandler?: (queryStringParameters: QueryStringParameters) => void): string {
+  private createUrlWithQueryParameters(
+    action: string,
+    queryStringHandler?: (queryStringParameters: QueryStringParameters) => void
+  ): string {
     const urlBuilder: UrlBuilder = new UrlBuilder(
-      ENV.API_ENDPOINT,
+      environment.API_ENDPOINT,
       action
     );
     // Push extra query string params
@@ -37,7 +37,10 @@ export class ApiEndpointService {
 
   /** URL WITH PATH VARIABLES */
 
-  private createUrlWithPathVariables(action: string, pathVariables: any[] = []): string {
+  private createUrlWithPathVariables(
+    action: string,
+    pathVariables: any[] = []
+  ): string {
     let encodedPathVariablesUrl: string = '';
     // Push extra path variables
     for (const pathVariable of pathVariables) {
@@ -48,7 +51,7 @@ export class ApiEndpointService {
       }
     }
     const urlBuilder: UrlBuilder = new UrlBuilder(
-      ENV.API_ENDPOINT,
+      environment.API_ENDPOINT,
       `${action}${encodedPathVariablesUrl}`
     );
     return urlBuilder.toString();
