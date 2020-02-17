@@ -53,9 +53,15 @@ material-dashboard-angular
 │   │   ├── core
 │   │   │   ├── auth
 │   │   │   ├── http
-│   │   │   │   ├── config.ts
 │   │   │   │   ├── services
-│   │   │   │   └── shared
+│   │   │   │   │   ├── api-http.service
+│   │   │   │   │   └── api-endpoints.service
+│   │   │   │   ├── classes
+│   │   │   │   │   ├── query-string-parameters
+│   │   │   │   │   └── url-builder
+│   │   │   │   ├── endpoints
+│   │   │   │   │   ├── service 0-N
+│   │   │   │   │   └── ...........
 │   │   │   └── mocks
 │   │   ├── entry-components
 │   │   │   └──  ............

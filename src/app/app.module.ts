@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app.routing';
@@ -17,10 +18,13 @@ import { LoginComponent } from './views/login/login.component';
   imports: [
     BrowserAnimationsModule,
     HttpModule,
+    HttpClientModule,
     LayoutsModule,
     RouterModule,
     AppRoutingModule,
     BrowserModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
