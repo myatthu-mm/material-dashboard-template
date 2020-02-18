@@ -60,7 +60,8 @@ material-dashboard-angular
 │   │   │   │   │   ├── query-string-parameters
 │   │   │   │   │   └── url-builder
 │   │   │   │   ├── endpoints
-│   │   │   │   │   ├── service 0-N
+│   │   │   │   │   ├── actions.ts
+│   │   │   │   │   ├── endpoint-service 0-N
 │   │   │   │   │   └── ...........
 │   │   │   └── mocks
 │   │   ├── entry-components
