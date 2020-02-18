@@ -18,11 +18,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 > This project was implemented for Front-end admin site solutions.
 
-> Using Angular official [Material](https://material.angular.io/) and Creative Tim's [Material Bootstrap](https://demos.creative-tim.com/material-dashboard-angular2) template.
+> Using Angular official [Material](https://material.angular.io/) and Creative Tim's [Material Bootstrap Dashboard](https://demos.creative-tim.com/material-dashboard-angular2) template.
 
 > Modified and used [Own project code architecture](https://github.com/myatthu-mm/FE-BE-Hierarcy).
 
 > Layouts are also responsive.
+
+> Included good habits **REST api**  in *api-calls* branch.
+
+ ### **Three** good habits for REST api calls
+ - Doesn't use API url directly in component, so don't need to change it in every component if *API url changed*.
+ - Doesn't use `httpClient` module directly in component, so don't need to change it in every component if *replaces with another module*.
+ - Path variable is encoded, so API calls won't fail even if *character isn’t a valid* URL character.
 
 ### What's included
 
