@@ -7,7 +7,7 @@ import { MOCK_ENV } from '../../../../environments/environment.mock';
   providedIn: 'root'
 })
 export class ApiEndpointService {
-  constructor() {}
+  constructor() { }
 
   /** URL Creator */
   public createUrl(action: string, isMockAPI: boolean = false): string {
@@ -20,7 +20,7 @@ export class ApiEndpointService {
 
   /** URL WITH QUERY PARAMS */
 
-  private createUrlWithQueryParameters(
+  public createUrlWithQueryParameters(
     action: string,
     queryStringHandler?: (queryStringParameters: QueryStringParameters) => void
   ): string {
@@ -37,7 +37,7 @@ export class ApiEndpointService {
 
   /** URL WITH PATH VARIABLES */
 
-  private createUrlWithPathVariables(
+  public createUrlWithPathVariables(
     action: string,
     pathVariables: any[] = []
   ): string {

@@ -12,12 +12,12 @@ export class ApiHttpService {
     return this.http.get(url, options);
   }
 
-  public post(url: string, data: any, options?: any): Observable<any> {
-    return this.http.post(url, data, options);
+  public post(params: any, options?: any): Observable<any> {
+    return this.http.post(params.url, params.body, options);
   }
 
-  public put(url: string, data: any, options?: any): Observable<any> {
-    return this.http.put(url, data, options);
+  public put(params: any, options?: any): Observable<any> {
+    return this.http.put(params.url, params.body, options);
   }
 
   public delete(url: string, options?: any): Observable<any> {
